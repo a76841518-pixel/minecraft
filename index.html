@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚽ مدير كرة القدم - النسخة المتطورة</title>
+    
+    <!-- ===== مكتبات خارجية ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- ===== ملفات CSS ===== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/tables.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <!-- ===== خلفيات متحركة ===== -->
+    <div class="glow-bg"></div>
+    <div class="glow-bg glow-bg-2"></div>
+
+    <!-- ===== حالة الاتصال ===== -->
+    <div class="connection-status" id="connectionStatus">
+        <i class="fas fa-wifi"></i> <span id="connectionText">جاري الاتصال...</span>
+    </div>
+
+    <!-- ===== الشريط الجانبي ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-side">
+            <i class="fas fa-futbol"></i>
+            <span>مدير كرة القدم</span>
+        </div>
+        <nav id="mainNav">
+            <!-- يتم إنشاؤها بواسطة JavaScript -->
+        </nav>
+        <div class="user-badge" id="userBadge">
+            <i class="fas fa-user-circle"></i>
+            <span id="userNameDisplay">زائر</span>
+            <button class="btn btn-sm btn-outline" id="logoutBtn" style="display:none;">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main class="main-content">
+        <div class="container" id="appContainer">
+            <div id="sectionsContainer"></div>
+        </div>
+    </main>
+
+    <!-- ===== المودالات ===== -->
+    <div id="modalsContainer"></div>
+
+    <!-- ===== ملفات JavaScript (كـ Modules) ===== -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/firestore-service.js"></script>
+    <script type="module" src="js/data-manager.js"></script>
+    <script type="module" src="js/charts.js"></script>
+    <script type="module" src="js/game-engine.js"></script>
+    <script type="module" src="js/ui-renderer.js"></script>
+    <script type="module" src="js/events.js"></script>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
