@@ -1,0 +1,116 @@
+/* ============================================================
+   forms.css – أنماط النماذج والمودالات
+   ============================================================ */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--gray);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    color: var(--light);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.15);
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.form-group select option {
+    background: var(--darker);
+    color: var(--light);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.modal-overlay.open {
+    display: flex;
+}
+.modal-card {
+    background: var(--dark);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+}
+
+/* مودال تسجيل الدخول */
+.login-modal .modal-card {
+    max-width: 400px;
+}
+.login-modal .login-error {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: 8px;
+    display: none;
+}
+.login-modal .login-loading {
+    display: none;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+.tab-login {
+    cursor: pointer;
+    transition: var(--transition);
+}
+.tab-login.active {
+    border-bottom: 2px solid var(--primary) !important;
+    color: var(--light) !important;
+}
+.tab-login:hover {
+    color: var(--light);
+}
+
+.clear-filters-btn {
+    background: transparent;
+    color: var(--gray);
+    border: 1px solid var(--glass-border);
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+.clear-filters-btn:hover {
+    background: var(--glass);
+    color: var(--light);
+}

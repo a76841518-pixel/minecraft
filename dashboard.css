@@ -1,0 +1,40 @@
+/* ============================================================
+   dashboard.css – أنماط لوحة التحكم والإحصائيات
+   ============================================================ */
+.stat-card {
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.stat-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--primary);
+}
+.stat-card .stat-icon {
+    font-size: 2.8rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+.stat-card .stat-number {
+    font-size: 2.6rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.stat-card .stat-label {
+    color: var(--gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    margin-top: 1rem;
+}

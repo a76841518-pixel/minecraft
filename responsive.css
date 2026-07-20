@@ -1,0 +1,86 @@
+/* ============================================================
+   responsive.css – استجابة الشاشات
+   ============================================================ */
+@media (max-width: 992px) {
+    .sidebar {
+        width: var(--sidebar-expanded);
+    }
+    .sidebar .logo-side span,
+    .sidebar nav a span,
+    .sidebar .user-badge span {
+        opacity: 1;
+    }
+    .main-content {
+        margin-left: var(--sidebar-expanded);
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        padding: 0.5rem 1rem;
+        border-left: none;
+        border-bottom: 1px solid var(--glass-border);
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .sidebar .logo-side {
+        margin-bottom: 0;
+        width: auto;
+    }
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        flex: 1;
+        padding: 0;
+    }
+    .sidebar nav a {
+        padding: 6px 12px;
+        width: auto;
+    }
+    .sidebar nav a span {
+        display: inline;
+    }
+    .sidebar .user-badge {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5 {
+        grid-template-columns: 1fr;
+    }
+    .sidebar nav a {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+    .sidebar nav a i {
+        font-size: 1rem;
+        min-width: 20px;
+    }
+}

@@ -1,0 +1,130 @@
+/* ============================================================
+   game.css – أنماط لعبة الأسئلة
+   ============================================================ */
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.game-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.game-progress .progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--glass);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.game-progress .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.question-box {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+.question-box .q-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.question-box .q-category {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: var(--primary);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.option-btn {
+    padding: 14px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid var(--glass-border);
+    color: var(--light);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+    text-align: right;
+}
+.option-btn:hover:not(.disabled) {
+    border-color: var(--primary);
+    background: rgba(108, 99, 255, 0.15);
+}
+.option-btn.selected-correct {
+    border-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+}
+.option-btn.selected-wrong {
+    border-color: var(--secondary);
+    background: rgba(255, 107, 107, 0.2);
+    color: var(--secondary);
+}
+.option-btn.show-correct {
+    border-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.15);
+}
+.option-btn.disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.game-result {
+    text-align: center;
+    padding: 2rem;
+}
+.game-result .result-score {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.game-result .result-detail {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin: 0.5rem 0 1.5rem;
+}
+
+.leaderboard {
+    background: var(--glass);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--glass-border);
+}
+.leaderboard .lb-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--glass-border);
+}
+.leaderboard .lb-item:last-child {
+    border-bottom: none;
+}
+.leaderboard .lb-rank {
+    font-weight: 700;
+    color: var(--accent);
+    margin-left: 10px;
+}
